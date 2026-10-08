@@ -1,0 +1,368 @@
+/* ==========================================================================
+   NORTEX — Sistema de Diseño Industrial
+   Estética: Robusta, Mecanizada, Acero, Carbón, Precisión Regiomontana
+   ========================================================================== */
+
+:root {
+  /* Paleta Base */
+  --bg-primary: #0C0F12;
+  --bg-secondary: #13171C;
+  --bg-tertiary: #1A2027;
+  --bg-card: #151A20;
+  --bg-card-hover: #1C232C;
+  --bg-elevated: #222B35;
+  --bg-overlay: rgba(12, 15, 18, 0.85);
+
+  /* Acentos Industriales */
+  --color-accent: #FF5500;        /* Naranja Forja Monterrey */
+  --color-accent-hover: #FF6E26;
+  --color-accent-glow: rgba(255, 85, 0, 0.35);
+  --color-amber: #F59E0B;         /* Amarillo Advertencia / Medición */
+  --color-amber-glow: rgba(245, 158, 11, 0.25);
+  --color-steel: #3B82F6;         /* Azul Acero Técnico */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #22BF5B;
+
+  /* Bordes & Estructura */
+  --border-subtle: #242D36;
+  --border-medium: #333F4C;
+  --border-strong: #475569;
+  --border-accent: rgba(255, 85, 0, 0.6);
+
+  /* Tipografía & Textos */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  --text-inverse: #0C0F12;
+
+  /* Tipografías */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-tech: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Elevación & Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.75);
+  --shadow-accent: 0 0 20px rgba(255, 85, 0, 0.25);
+
+  /* Layout */
+  --header-height: 76px;
+  --max-width: 1320px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset y caja */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Patrón de textura industrial sutil */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Tipografía base */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedores */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Botones con estilo industrial */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  font-family: var(--font-tech);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(255, 85, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  box-shadow: 0 6px 20px rgba(255, 85, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--text-muted);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(255, 85, 0, 0.05);
+}
+
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-whatsapp-hover);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.88rem;
+}
+
+.btn-lg {
+  padding: 16px 34px;
+  font-size: 1.15rem;
+}
+
+/* Badges Técnicos */
+.badge-tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-family: var(--font-tech);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 85, 0, 0.12);
+  color: var(--color-accent);
+  border: 1px solid rgba(255, 85, 0, 0.3);
+}
+
+.badge-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  border-radius: 2px;
+  border: 1px solid var(--border-subtle);
+}
+
+/* Section Header Común */
+.section-header {
+  margin-bottom: 44px;
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.section-header .subtitle {
+  font-family: var(--font-tech);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.section-header.text-center .subtitle {
+  justify-content: center;
+}
+
+.section-header h2 {
+  font-size: 2.75rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.section-header p.lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 680px;
+}
+
+.section-header.text-center p.lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card base */
+.card-industrial {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.card-industrial:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-medium);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Input industrial */
+.input-industrial {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 13px 18px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input-industrial:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.15);
+}
+
+.input-industrial::placeholder {
+  color: var(--text-dim);
+}
+
+/* Animaciones sutiles */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(37, 211, 102, 0.7);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.1rem;
+  }
+  .btn-lg {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
