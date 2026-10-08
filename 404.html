@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NORTEX — Redirigiendo...</title>
+    <script>
+      // SPA Fallback para GitHub Pages
+      // Redirige /NORTEX/cualquier-ruta a /NORTEX/?p=/cualquier-ruta o a hash
+      (function() {
+        var path = window.location.pathname;
+        var repo = '/NORTEX';
+        var cleanPath = path;
+        if (cleanPath.indexOf(repo) === 0) {
+          cleanPath = cleanPath.substring(repo.length);
+        }
+        if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
+        window.location.replace(repo + '/#' + cleanPath + window.location.search);
+      })();
+    </script>
+  </head>
+  <body style="background: #0C0F12; color: #FFF; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <p>Cargando NORTEX Herramientas...</p>
+  </body>
+</html>
