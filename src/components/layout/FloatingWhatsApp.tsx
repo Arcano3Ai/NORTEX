@@ -11,6 +11,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
   return (
     <div
+      className="floating-whatsapp-container"
       style={{
         position: 'fixed',
         bottom: '24px',
@@ -25,6 +26,7 @@ export const FloatingWhatsApp: React.FC = () => {
       {/* Tooltip comercial */}
       {isTooltipOpen && (
         <div
+          className="floating-whatsapp-tooltip"
           style={{
             backgroundColor: '#161B20',
             border: '1px solid var(--border-medium)',

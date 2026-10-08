@@ -246,14 +246,14 @@ export const QuoteDrawer: React.FC<QuoteDrawerProps> = ({ onNavigateToQuote }) =
               gap: '12px'
             }}
           >
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '8px' }}>
               <input
                 type="text"
                 placeholder="Tu Nombre / Puesto"
                 value={customerName}
                 onChange={(e) => setCustomerName(e.target.value)}
                 className="input-industrial"
-                style={{ padding: '8px 12px', fontSize: '0.82rem' }}
+                style={{ padding: '10px 12px' }}
               />
               <input
                 type="text"
@@ -261,7 +261,7 @@ export const QuoteDrawer: React.FC<QuoteDrawerProps> = ({ onNavigateToQuote }) =
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
                 className="input-industrial"
-                style={{ padding: '8px 12px', fontSize: '0.82rem' }}
+                style={{ padding: '10px 12px' }}
               />
             </div>
 
