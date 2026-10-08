@@ -76,6 +76,56 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({
           </p>
         </div>
 
+        {/* Banner de Catálogo Oficial de Revendedor (Santul / Sanelec / Sanplom / Plastiforze / Keer) */}
+        <div
+          style={{
+            backgroundColor: 'rgba(255, 85, 0, 0.05)',
+            border: '1px solid rgba(255, 85, 0, 0.3)',
+            borderRadius: 'var(--radius-md)',
+            padding: '20px 24px',
+            marginBottom: '28px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '16px'
+          }}
+        >
+          <div style={{ maxWidth: '640px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--color-accent)', display: 'inline-block' }} />
+              <strong style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-tech)', fontSize: '0.88rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                Línea Oficial de Reventa NORTEX — Catálogo Santul® Octubre 2026
+              </strong>
+            </div>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
+              Revendemos la gama completa de marcas del grupo: <strong>Santul®</strong>, <strong>Sanelec®</strong>, <strong>Sanplom®</strong>, <strong>Plastiforze®</strong> y <strong>Keer®</strong>. ¿Tienes un código o partida del catálogo? Búscalo por código o solicítalo directamente.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            <a
+              href="./catalogo/CATALOGO_SANTUL_OCT_26.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-sm"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--color-amber)', borderColor: 'rgba(245, 158, 11, 0.4)' }}
+              title="Abrir Catálogo Oficial Santul Octubre 2026 en PDF"
+            >
+              <span>Abrir Catálogo (PDF)</span>
+            </a>
+            <a
+              href="./catalogo/CATALOGO_SANTUL_OCT_26.pdf"
+              download="CATALOGO_SANTUL_OCT_26.pdf"
+              className="btn btn-secondary btn-sm"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+              title="Descargar archivo PDF completo a tu dispositivo"
+            >
+              <span>Descargar PDF</span>
+            </a>
+          </div>
+        </div>
+
         {/* Barra de Filtros y Búsqueda */}
         <div
           style={{

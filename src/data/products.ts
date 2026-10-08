@@ -286,5 +286,112 @@ export const PRODUCTS: Product[] = [
     ],
     featured: false,
     inStock: true
+  },
+  {
+    id: 'prod-plastiforze-lona-uso-rudo',
+    sku: 'PFZ-3120',
+    model: 'Lona Uso Rudo 6x9m Reforzada Plastiforze',
+    name: 'Lona Uso Rudo con Ojillos Metálicos 6x9 Metros Plastiforze®',
+    slug: 'lona-uso-rudo-reforzada-6x9m-plastiforze',
+    brand: 'Plastiforze®',
+    categorySlug: 'herramientas-construccion',
+    categoryName: 'Herramientas para Construcción',
+    shortDescription: 'Tejido de polietileno de alta densidad 14x14 hilos por pulgada con laminado doble impermeable y esquinas reforzadas.',
+    description: 'Solución de protección de intemperie del catálogo Santul/Plastiforze® para protección de materiales, agregados de construcción, maquinaria en obra civil y remolques de carga pesada.',
+    images: [
+      './images/cat-construccion.jpg',
+      './images/hero-industrial.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '3120' },
+      { label: 'Dimensiones', value: '6 x 9 Metros (aprox. 54 m²)' },
+      { label: 'Gramaje', value: '180 g/m² (Uso extra rudo)' },
+      { label: 'Ojillos', value: 'Aluminio inoxidable cada 1 metro' },
+      { label: 'Protección', value: 'Tratamiento UV contra degradación solar' }
+    ],
+    features: [
+      'Costuras y bastillas termo-selladas con cuerda perimetral reforzada',
+      '100% impermeable a lluvia, rocío y polvo abrasivo',
+      'Esquinas moldeadas con inserto de plástico para tensado firme'
+    ],
+    applications: [
+      'Protección de cemento, varilla y maquinaria en obra abierta',
+      'Cubierta para transporte de carga en plataformas y cajas secas',
+      'Campamentos de obra y techados provisionales industriales'
+    ],
+    featured: true,
+    inStock: true
+  },
+  {
+    id: 'prod-keer-juego-dados-aut',
+    sku: 'KEE-6840',
+    model: 'Juego Dados y Matraca 1/2" 24 Pzas Keer',
+    name: 'Juego de Dados y Matraca 1/2" 24 Piezas Keer® / Santul',
+    slug: 'juego-dados-matraca-media-24-piezas-keer',
+    brand: 'Keer®',
+    categorySlug: 'herramientas-manuales',
+    categoryName: 'Herramientas Manuales',
+    shortDescription: 'Acero Cromo-Vanadio forjado con matraca reversible de 72 dientes y botón de desacople rápido. Estuche de uso pesado.',
+    description: 'Set mecánico profesional del catálogo Santul/Keer® para talleres de mantenimiento automotriz, flotillas diésel e instalaciones de maquinaria pesada.',
+    images: [
+      './images/cat-manuales.jpg',
+      './images/hero-industrial.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '6840' },
+      { label: 'Mando', value: '1/2" (12.7 mm)' },
+      { label: 'Mecanismo Matraca', value: '72 Dientes (Ángulo de recuperación de 5°)' },
+      { label: 'Piezas', value: '24 piezas (dados 10mm a 32mm + extensiones + nudo)' },
+      { label: 'Acabado', value: 'Cromo espejo pulido anticorrosión' }
+    ],
+    features: [
+      'Marcaje láser y troquelado de alta visibilidad',
+      'Extensión de 5" y 10" con mango articulado tipo barra corrediza',
+      'Maletín de polietileno con bisagras metálicas reforzadas'
+    ],
+    applications: [
+      'Reparación y mantenimiento de transporte de carga y flotillas',
+      'Apriete estructural de pernos de alta resistencia',
+      'Servicio electromecánico en planta y líneas de producción'
+    ],
+    featured: true,
+    inStock: true
+  },
+  {
+    id: 'prod-sanelec-reflector-led',
+    sku: 'SNL-1450',
+    model: 'Reflector LED Industrial 100W Sanelec',
+    name: 'Reflector LED Industrial 100W 6,500K Uso Rudo Sanelec®',
+    slug: 'reflector-led-industrial-100w-sanelec',
+    brand: 'Sanelec®',
+    categorySlug: 'herramientas-industriales',
+    categoryName: 'Herramientas Industriales',
+    shortDescription: 'Cuerpo de aluminio inyectado para alta disipación térmica, protección IP65 para intemperie y 10,000 lúmenes de flujo.',
+    description: 'Luminaria de grado industrial del catálogo Santul/Sanelec® para patios de maniobras, naves de almacenaje, accesos de planta y obras de construcción nocturnas.',
+    images: [
+      './images/cat-seguridad.jpg',
+      './images/cat-construccion.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '1450' },
+      { label: 'Potencia', value: '100 Watts (Equivale a 1,000W halógeno)' },
+      { label: 'Flujo Luminoso', value: '10,000 Lúmenes' },
+      { label: 'Temperatura de Color', value: '6,500K (Luz Blanca Fría)' },
+      { label: 'Grado de Protección', value: 'IP65 (Resistente a chorros de agua y polvo)' },
+      { label: 'Voltaje de Operación', value: '100 - 240 V~ Multivoltaje' }
+    ],
+    features: [
+      'Driver integrado de alta eficiencia con protección contra picos de voltaje',
+      'Vidrio templado anti-impacto de 4mm',
+      'Soporte metálico orientable a 180° para montaje en poste o muro'
+    ],
+    applications: [
+      'Iluminación perimetral de bodegas y naves en parques industriales',
+      'Patios de carga y descarga de trailers',
+      'Iluminación de frentes de obra en turnos vespertinos y nocturnos'
+    ],
+    featured: false,
+    inStock: true
   }
 ];
+
