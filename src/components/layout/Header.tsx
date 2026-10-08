@@ -160,6 +160,28 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenP
               </button>
             );
           })}
+          <a
+            href="./catalogo/CATALOGO_SANTUL_OCT_26.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: 'var(--font-tech)',
+              fontSize: '0.86rem',
+              fontWeight: 700,
+              letterSpacing: '0.06em',
+              color: 'var(--color-amber)',
+              padding: '4px 10px',
+              borderRadius: 'var(--radius-sm)',
+              border: '1px solid rgba(245, 158, 11, 0.4)',
+              backgroundColor: 'rgba(245, 158, 11, 0.08)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '4px'
+            }}
+            title="Abrir Catálogo Oficial Santul Octubre 2026 en PDF"
+          >
+            <span>Catálogo PDF</span>
+          </a>
         </nav>
 
         {/* Buscador de Productos Desktop */}
@@ -403,6 +425,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenP
             >
               <MessageSquare size={18} />
               Contactar por WhatsApp
+            </a>
+            <a
+              href="./catalogo/CATALOGO_SANTUL_OCT_26.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+              style={{ width: '100%', borderColor: 'rgba(245, 158, 11, 0.4)', color: 'var(--color-amber)' }}
+            >
+              <FileText size={18} color="var(--color-amber)" />
+              Catálogo Santul (PDF)
             </a>
             <button
               onClick={() => {

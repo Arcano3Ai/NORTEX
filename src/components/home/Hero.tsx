@@ -133,7 +133,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             Herramientas profesionales y soluciones para construcción, industria y mantenimiento.
           </p>
 
-          {/* CTAs PRINCIPAL Y SECUNDARIO */}
+          {/* CTAs PRINCIPAL, SECUNDARIO Y CATÁLOGO PDF */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '44px' }}>
             <button
               onClick={() => onNavigate('/herramientas')}
@@ -152,6 +152,18 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               <FileText size={20} color="var(--color-accent)" />
               <span>Solicitar cotización</span>
             </button>
+
+            <a
+              href="./catalogo/CATALOGO_SANTUL_OCT_26.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-lg"
+              title="Descargar Catálogo Oficial Santul Octubre 2026 en PDF"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+            >
+              <FileText size={18} color="var(--color-amber)" />
+              <span>Catálogo Santul (PDF)</span>
+            </a>
           </div>
 
           {/* Pilares rápidos de confianza */}
