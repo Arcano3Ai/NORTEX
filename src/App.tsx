@@ -4,6 +4,7 @@ import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { FloatingWhatsApp } from './components/layout/FloatingWhatsApp';
 import { QuoteDrawer } from './components/layout/QuoteDrawer';
+import { MobileBottomNav } from './components/layout/MobileBottomNav';
 import { HomePage } from './pages/HomePage';
 import { CatalogPage } from './pages/CatalogPage';
 import { CategoryPage } from './pages/CategoryPage';
@@ -257,6 +258,8 @@ export const AppContent: React.FC = () => {
       <Footer onNavigate={navigateTo} />
 
       <FloatingWhatsApp />
+
+      <MobileBottomNav currentPath={currentPath} onNavigate={navigateTo} />
 
       <QuoteDrawer onNavigateToQuote={() => navigateTo('/cotizacion')} />
     </div>

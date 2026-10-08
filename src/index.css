@@ -419,12 +419,22 @@ img {
   }
 
   .floating-whatsapp-container {
-    bottom: 16px !important;
+    bottom: 76px !important; /* Arriba de la barra de navegación móvil */
     right: 16px !important;
   }
 
   .floating-whatsapp-tooltip {
     display: none !important; /* En móviles muy pequeños, no obstruir la pantalla */
+  }
+
+  body {
+    padding-bottom: 68px; /* Espacio para que la bottom bar no tape contenido */
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-bottom-nav {
+    display: none !important;
   }
 }
 
