@@ -27,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           right: 0,
           bottom: 0,
           left: 0,
-          backgroundImage: 'url(/images/hero-industrial.jpg)',
+          backgroundImage: 'url(./images/hero-industrial.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center 40%',
           opacity: 0.28,

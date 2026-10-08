@@ -18,10 +18,23 @@ import { CATEGORIES } from './data/categories';
 import type { Product } from './types/product';
 import type { BlogPost } from './data/blogPosts';
 
+// Helper para normalizar rutas soportando subdirectorios de GitHub Pages (ej: /NORTEX) o Hash
+const getNormalizedPath = (rawPath?: string): string => {
+  let path = rawPath !== undefined ? rawPath : (window.location.pathname || '/');
+  if (window.location.hash && window.location.hash.startsWith('#/')) {
+    path = window.location.hash.replace(/^#/, '');
+  } else {
+    // Eliminar prefijo del repositorio en GitHub Pages (/NORTEX o /NORTEX/)
+    path = path.replace(/^\/NORTEX\/?/i, '/');
+  }
+  if (!path.startsWith('/')) path = '/' + path;
+  return path;
+};
+
 export const AppContent: React.FC = () => {
-  // Estado de ruta sincronizado con window.location.pathname
+  // Estado de ruta sincronizado
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    return window.location.pathname || '/';
+    return getNormalizedPath();
   });
 
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
@@ -29,18 +42,22 @@ export const AppContent: React.FC = () => {
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  // Sincronizar con eventos popstate (atrás/adelante del navegador)
+  // Sincronizar con eventos popstate y hashchange
   useEffect(() => {
-    const handlePopState = () => {
-      const path = window.location.pathname || '/';
-      setCurrentPath(path);
-      parsePath(path);
+    const handleLocationChange = () => {
+      const normalized = getNormalizedPath();
+      setCurrentPath(normalized);
+      parsePath(normalized);
     };
 
-    window.addEventListener('popstate', handlePopState);
-    parsePath(window.location.pathname || '/');
+    window.addEventListener('popstate', handleLocationChange);
+    window.addEventListener('hashchange', handleLocationChange);
+    parsePath(getNormalizedPath());
 
-    return () => window.removeEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+      window.removeEventListener('hashchange', handleLocationChange);
+    };
   }, []);
 
   // Función para parsear la URL limpia
@@ -86,13 +103,12 @@ export const AppContent: React.FC = () => {
     setActiveCategorySlug(null);
   };
 
-  // Navegación limpia
+  // Navegación limpia compatible con GitHub Pages
   const navigateTo = (path: string) => {
-    if (path.startsWith('/#')) {
-      const elementId = path.replace('/#', '');
-      if (currentPath !== '/') {
-        window.history.pushState({}, '', '/');
-        setCurrentPath('/');
+    if (path.startsWith('/#') || (path.startsWith('#') && !path.startsWith('#/'))) {
+      const elementId = path.replace(/^\/?#/, '');
+      if (getNormalizedPath() !== '/') {
+        navigateTo('/');
         setTimeout(() => {
           const el = document.getElementById(elementId);
           if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -104,9 +120,19 @@ export const AppContent: React.FC = () => {
       return;
     }
 
-    window.history.pushState({}, '', path);
-    setCurrentPath(path);
-    parsePath(path);
+    // Preservar prefijo /NORTEX en la barra de direcciones si se corre en GitHub Pages
+    const isGhPages = window.location.pathname.toLowerCase().startsWith('/nortex');
+    const targetUrl = isGhPages ? `/NORTEX${path === '/' ? '/' : path}` : path;
+
+    try {
+      window.history.pushState({}, '', targetUrl);
+    } catch {
+      window.location.hash = path;
+    }
+
+    const normalized = getNormalizedPath(path);
+    setCurrentPath(normalized);
+    parsePath(normalized);
   };
 
   const handleSelectProduct = (product: Product) => {

@@ -13,8 +13,8 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Rotomartillo de 3 funciones (perforación, percusión y cincelado) con embrague de seguridad mecánica para obra pesada.',
     description: 'Diseñado para contratistas y cuadrillas de construcción en Monterrey que requieren rendimiento ininterrumpido en perforación sobre concreto armado, losas y muros de block. Cuenta con motor sobredimensionado con blindaje de inducido contra polvo abrasivo, sistema antivibración en empuñadura trasera y dial selector de velocidad constante bajo carga.',
     images: [
-      '/images/hero-industrial.jpg',
-      '/images/cat-construccion.jpg'
+      './images/hero-industrial.jpg',
+      './images/cat-construccion.jpg'
     ],
     specifications: [
       { label: 'Potencia Nominal', value: '850 Watts' },
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Mecanismo de doble martillo (Twin Hammer) con torque máximo de 950 ft-lb para líneas de ensamble y talleres mecánicos.',
     description: 'Solución neumática de alto torque con cuerpo de aleación ligera compuesta y gatillo progresivo para desapriete instantáneo de birlos corroídos y tornillería de alta graduación. Diseñada para operar en líneas de producción continua con bajo consumo de aire y escape posterior orientado.',
     images: [
-      '/images/hero-industrial.jpg',
+      './images/hero-industrial.jpg',
       '/images/cat-manuales.jpg'
     ],
     specifications: [
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Fabricadas en forja de Cromo-Vanadio templado con acabado satinado anticorrosión y perfil Maxi-Drive.',
     description: 'Juego completo de llaves combinadas para mecánicos industriales, técnicos de mantenimiento y montadores. Su perfil curvo de 15° en la boca española y corona de 12 puntas permite acceder a tornillería confinada sin redondear las aristas de cabezas hexagonales.',
     images: [
-      '/images/cat-manuales.jpg',
+      './images/cat-manuales.jpg',
       '/images/hero-industrial.jpg'
     ],
     specifications: [
@@ -126,8 +126,8 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Proyección 360° en 3 ejes ortogonales con diodo de haz verde de visibilidad extendida hasta 60 metros.',
     description: 'Instrumento indispensable para nivelación de muros tabla-roca, pisos epóxicos, tirantes de plafón y cimentaciones. El haz de luz verde proporciona hasta 4 veces mayor visibilidad que los lásers rojos convencionales bajo luz diurna intensa en naves industriales.',
     images: [
-      '/images/cat-construccion.jpg',
-      '/images/cat-seguridad.jpg'
+      './images/cat-construccion.jpg',
+      './images/cat-seguridad.jpg'
     ],
     specifications: [
       { label: 'Tipo de Diodo', value: 'Haz Verde 515 nm, Clase II' },
@@ -162,7 +162,7 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Motor de 2,400 Watts con bobinados epóxicos y arranque suave para corte y desbaste pesado de acero.',
     description: 'Máquina de trabajo pesado diseñada para paileros, soldadores y herreros de Monterrey. Su diseño ergonómico reduce la fatiga en jornadas extensas de corte de perfiles IPR, placas estructurales y biselado de tubos de conducción.',
     images: [
-      '/images/cat-construccion.jpg',
+      './images/cat-construccion.jpg',
       '/images/hero-industrial.jpg'
     ],
     specifications: [
@@ -198,8 +198,8 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Rango de 20 a 200 ft-lb con precisión ±1%, pantalla LED retroiluminada y alarma acústica y vibratoria.',
     description: 'Instrumento de control de apriete indispensable en auditorías de calidad automotriz y montaje de bridas de presión en tuberías de gas y vapor. Incluye certificado de calibración rastreable a patrones nacionales.',
     images: [
-      '/images/cat-manuales.jpg',
-      '/images/cat-seguridad.jpg'
+      './images/cat-manuales.jpg',
+      './images/cat-seguridad.jpg'
     ],
     specifications: [
       { label: 'Capacidad de Medición', value: '27 - 270 Nm (20 - 200 ft-lb)' },
@@ -233,7 +233,7 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Calzado certificado NOM-113-STPS-2009 tipo II y III con suela de doble densidad resistente a hidrocarburos.',
     description: 'Bota de trabajo rudo confeccionada en cuero flor entero curtido al cromo con recubrimiento hidrofugado. Brinda protección contra descargas eléctricas de hasta 14,000 Volts sin incrementar el peso gracias a su casquillo de policarbonato no metálico.',
     images: [
-      '/images/cat-seguridad.jpg',
+      './images/cat-seguridad.jpg',
       '/images/hero-industrial.jpg'
     ],
     specifications: [
