@@ -9,6 +9,7 @@ interface QuoteDrawerProps {
 export const QuoteDrawer: React.FC<QuoteDrawerProps> = ({ onNavigateToQuote }) => {
   const {
     items,
+    addCatalogCustomItem,
     removeItem,
     updateQuantity,
     clearQuote,
@@ -19,6 +20,16 @@ export const QuoteDrawer: React.FC<QuoteDrawerProps> = ({ onNavigateToQuote }) =
 
   const [customerName, setCustomerName] = useState('');
   const [companyName, setCompanyName] = useState('');
+  const [catalogCodeInput, setCatalogCodeInput] = useState('');
+  const [catalogQtyInput, setCatalogQtyInput] = useState(1);
+
+  const handleAddCustomCatalogItem = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!catalogCodeInput.trim()) return;
+    addCatalogCustomItem(catalogCodeInput.trim(), catalogQtyInput);
+    setCatalogCodeInput('');
+    setCatalogQtyInput(1);
+  };
 
   if (!isDrawerOpen) return null;
 
@@ -87,6 +98,55 @@ export const QuoteDrawer: React.FC<QuoteDrawerProps> = ({ onNavigateToQuote }) =
           >
             <X size={20} />
           </button>
+        </div>
+
+        {/* Widget Rápido: Cotizar Partida Directa del Catálogo Santul */}
+        <div
+          style={{
+            padding: '14px 20px',
+            backgroundColor: 'rgba(255, 85, 0, 0.05)',
+            borderBottom: '1px solid var(--border-subtle)'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+            <span style={{ fontSize: '0.78rem', fontFamily: 'var(--font-tech)', fontWeight: 700, color: 'var(--color-accent)', letterSpacing: '0.06em' }}>
+              + AGREGAR CÓDIGO DEL CATÁLOGO SANTUL
+            </span>
+            <a
+              href="./catalogo/CATALOGO_SANTUL_OCT_26.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: '0.74rem', color: 'var(--color-amber)', textDecoration: 'underline' }}
+            >
+              Ver PDF
+            </a>
+          </div>
+          <form onSubmit={handleAddCustomCatalogItem} style={{ display: 'flex', gap: '8px' }}>
+            <input
+              type="text"
+              placeholder="Código o modelo (ej. 7524)"
+              value={catalogCodeInput}
+              onChange={(e) => setCatalogCodeInput(e.target.value)}
+              className="input-industrial"
+              style={{ flex: 1, padding: '8px 12px', fontSize: '0.84rem' }}
+            />
+            <input
+              type="number"
+              min="1"
+              value={catalogQtyInput}
+              onChange={(e) => setCatalogQtyInput(Math.max(1, parseInt(e.target.value) || 1))}
+              className="input-industrial"
+              style={{ width: '60px', padding: '8px 8px', textAlign: 'center', fontSize: '0.84rem' }}
+              title="Cantidad"
+            />
+            <button
+              type="submit"
+              className="btn btn-primary btn-sm"
+              style={{ padding: '8px 12px', fontSize: '0.82rem', whiteSpace: 'nowrap' }}
+            >
+              + Agregar
+            </button>
+          </form>
         </div>
 
         {/* Lista de Productos Cotizados */}

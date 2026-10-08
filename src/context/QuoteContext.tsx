@@ -4,6 +4,7 @@ import type { Product, QuoteItem } from '../types/product';
 interface QuoteContextType {
   items: QuoteItem[];
   addItem: (product: Product, quantity?: number) => void;
+  addCatalogCustomItem: (codeOrDescription: string, quantity?: number) => void;
   removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearQuote: () => void;
@@ -52,6 +53,29 @@ export const QuoteProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       return [...prev, { product, quantity }];
     });
     setIsDrawerOpen(true);
+  };
+
+  const addCatalogCustomItem = (codeOrDescription: string, quantity = 1) => {
+    const trimmed = codeOrDescription.trim();
+    if (!trimmed) return;
+    const customProd: Product = {
+      id: 'custom-' + Date.now(),
+      sku: trimmed.toUpperCase(),
+      model: 'Partida Catálogo Santul',
+      name: `Partida Catálogo Santul: ${trimmed}`,
+      slug: 'catalogo-' + Date.now(),
+      brand: 'Santul®',
+      categorySlug: 'herramientas-industriales',
+      categoryName: 'Catálogo Santul',
+      shortDescription: `Partida solicitada del catálogo oficial Santul: ${trimmed}`,
+      description: `Partida solicitada directamente del catálogo oficial Santul: ${trimmed}`,
+      images: ['./images/hero-industrial.jpg'],
+      specifications: [{ label: 'Código / Referencia', value: trimmed }],
+      features: ['Partida especial del catálogo Santul'],
+      applications: ['Reventa y suministro directo'],
+      inStock: true
+    };
+    addItem(customProd, quantity);
   };
 
   const removeItem = (productId: string) => {
@@ -111,6 +135,7 @@ export const QuoteProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       value={{
         items,
         addItem,
+        addCatalogCustomItem,
         removeItem,
         updateQuantity,
         clearQuote,

@@ -11,10 +11,10 @@ export const PRODUCTS: Product[] = [
     categorySlug: 'herramientas-electricas',
     categoryName: 'Herramientas Eléctricas',
     shortDescription: 'Rotomartillo de 3 funciones (taladro, percusión y cincelado) con energía de impacto de 3.2 Joules y embrague de seguridad mecánica.',
-    description: 'Equipo de grado profesional del catálogo Santul® para contratistas y cuadrillas de construcción en Monterrey. Motor con blindaje de inducido contra polvo abrasivo, sistema antivibración en empuñadura trasera y dial selector de velocidad constante bajo carga para perforar losas y concreto armado.',
+    description: 'Equipo de grado profesional del catálogo oficial Santul® para contratistas y cuadrillas de construcción en Monterrey. Motor con blindaje de inducido contra polvo abrasivo, sistema antivibración en empuñadura trasera y selector de velocidad para perforar losas y concreto armado.',
     images: [
-      './images/hero-industrial.jpg',
-      './images/cat-construccion.jpg'
+      './images/products/rotomartillo.jpg',
+      './images/hero-industrial.jpg'
     ],
     specifications: [
       { label: 'Código de Catálogo', value: '7524' },
@@ -51,10 +51,10 @@ export const PRODUCTS: Product[] = [
     categorySlug: 'herramientas-electricas',
     categoryName: 'Herramientas Eléctricas',
     shortDescription: 'Motor sobredimensionado de 2,400 Watts con bobinados epóxicos, guarda sin llave y sistema de arranque suave.',
-    description: 'Máquina de trabajo pesado del catálogo Santul® para paileros, soldadores y herreros de Monterrey. Su diseño ergonómico reduce la fatiga en jornadas extensas de corte de perfiles IPR, placas estructurales y biselado de tubos de conducción.',
+    description: 'Máquina de trabajo pesado del catálogo oficial Santul® para paileros, soldadores y herreros de Monterrey. Su diseño ergonómico reduce la fatiga en jornadas extensas de corte de perfiles IPR, placas estructurales y biselado de tubos de conducción.',
     images: [
-      './images/cat-construccion.jpg',
-      './images/hero-industrial.jpg'
+      './images/products/esmeriladora.jpg',
+      './images/cat-construccion.jpg'
     ],
     specifications: [
       { label: 'Código de Catálogo', value: '7515' },
@@ -80,17 +80,17 @@ export const PRODUCTS: Product[] = [
   {
     id: 'prod-santul-llaves-crv',
     sku: 'STL-6630',
-    model: 'Juego Llaves Combinadas 16 Pzas Cr-V',
+    model: 'Juego Llaves Combinadas 16 Pzas Cr-V Santul',
     name: 'Juego de Llaves Combinadas Cromo-Vanadio 16 Piezas Santul®',
     slug: 'juego-llaves-combinadas-cromo-vanadio-16-piezas-santul',
     brand: 'Santul®',
     categorySlug: 'herramientas-manuales',
     categoryName: 'Herramientas Manuales',
     shortDescription: 'Fabricadas en acero Cromo-Vanadio templado con acabado satinado anticorrosión y perfil Maxi-Drive.',
-    description: 'Juego de llaves combinadas Santul® para mecánicos industriales, técnicos de mantenimiento y montadores. Su boca española curva y corona de 12 puntas permite acceder a tornillería confinada sin redondear las aristas de cabezas hexagonales.',
+    description: 'Juego de llaves combinadas del catálogo Santul® para mecánicos industriales, técnicos de mantenimiento y montadores. Su boca española curva y corona de 12 puntas permite acceder a tornillería confinada sin redondear las aristas de pernos.',
     images: [
-      './images/cat-manuales.jpg',
-      './images/hero-industrial.jpg'
+      './images/products/llaves.jpg',
+      './images/cat-manuales.jpg'
     ],
     specifications: [
       { label: 'Código de Catálogo', value: '6630' },
@@ -124,8 +124,8 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Concha plástica reforzada de alto impacto con bastidor tubular y llanta neumática reforzada para faenas de construcción.',
     description: 'Equipo insignia del catálogo Santul/Plastiforze® para transporte de agregados, revoltura de concreto y mampostería. Resiste impacto severo de grava sin oxidarse ni abollarse como las conchas metálicas tradicionales.',
     images: [
-      './images/cat-construccion.jpg',
-      './images/hero-industrial.jpg'
+      './images/products/carretilla.jpg',
+      './images/cat-construccion.jpg'
     ],
     specifications: [
       { label: 'Código de Catálogo', value: '3410' },
@@ -148,146 +148,6 @@ export const PRODUCTS: Product[] = [
     inStock: true
   },
   {
-    id: 'prod-sanelec-centro-carga',
-    sku: 'SNL-1280',
-    model: 'Centro de Carga 4 Circuitos Sanelec',
-    name: 'Centro de Carga Bifásico 4 Circuitos Sobreponer Sanelec®',
-    slug: 'centro-de-carga-bifasico-4-circuitos-sanelec',
-    brand: 'Sanelec®',
-    categorySlug: 'herramientas-industriales',
-    categoryName: 'Herramientas Industriales',
-    shortDescription: 'Gabinete metálico con pintura horneada, barras de cobre electrolítico y compatibilidad con pastillas termomagnéticas estándar.',
-    description: 'Componente eléctrico certificado del catálogo Sanelec® para distribución y protección de circuitos en talleres, locales comerciales e instalaciones industriales ligeras.',
-    images: [
-      './images/cat-seguridad.jpg',
-      './images/cat-manuales.jpg'
-    ],
-    specifications: [
-      { label: 'Código de Catálogo', value: '1280' },
-      { label: 'Circuitos', value: '4 Espacios (Bifásico)' },
-      { label: 'Tensión Máxima', value: '120/240 V~' },
-      { label: 'Corriente Nominal', value: '60 A' },
-      { label: 'Gabinete', value: 'Lámina de acero rolada en frío' }
-    ],
-    features: [
-      'Entradas pre-cortadas (knockouts) para canalización en 1/2" y 3/4"',
-      'Fácil montaje en muro con terminales de neutro y tierra independientes',
-      'Certificación NOM vigente'
-    ],
-    applications: [
-      'Protección de circuitos de maquinaria en talleres mecánicos',
-      'Alimentación de compresores y herramientas estacionarias',
-      'Tableros secundarios en bodegas y naves'
-    ],
-    featured: false,
-    inStock: true
-  },
-  {
-    id: 'prod-sanplom-stillson',
-    sku: 'SPL-6710',
-    model: 'Llave Stillson 18" Uso Pesado Sanplom',
-    name: 'Llave para Tubo Stillson 18" Hierro Nodular Sanplom®',
-    slug: 'llave-para-tubo-stillson-18-pulgadas-sanplom',
-    brand: 'Sanplom®',
-    categorySlug: 'herramientas-manuales',
-    categoryName: 'Herramientas Manuales',
-    shortDescription: 'Cuerpo de hierro nodular forjado con mordazas de acero templado por inducción para sujeción firme de tubería de gas y agua.',
-    description: 'Herramienta de apriete indispensable del catálogo Sanplom® para plomeros e instaladores industriales. Permite trabajar tuberías galvanizadas, de cobre y cédula 40 sin resbalar.',
-    images: [
-      './images/cat-manuales.jpg',
-      './images/cat-construccion.jpg'
-    ],
-    specifications: [
-      { label: 'Código de Catálogo', value: '6710' },
-      { label: 'Longitud', value: '18" (450 mm)' },
-      { label: 'Apertura Máxima', value: '2-1/2" (63 mm)' },
-      { label: 'Material del Cuerpo', value: 'Hierro nodular de alta resistencia' },
-      { label: 'Mordazas', value: 'Acero aleado forjado y estriado profundo' }
-    ],
-    features: [
-      'Tuerca moleteada de avance rápido con resorte de recuperación',
-      'Perfil con viga en I para máximo brazo de palanca sin flexión',
-      'Acabado con pintura horneada anticorrosión'
-    ],
-    applications: [
-      'Instalaciones de gas LP y natural en plantas y comercios',
-      'Mantenimiento de tuberías hidroneumáticas de vapor y agua',
-      'Apriete y desmonte de uniones roscadas NPT'
-    ],
-    featured: false,
-    inStock: true
-  },
-  {
-    id: 'prod-santul-casco',
-    sku: 'STL-9110',
-    model: 'Casco de Protección Dieléctrico Tipo I Clase E Santul',
-    name: 'Casco de Seguridad Industrial Tipo I Clase E Santul®',
-    slug: 'casco-seguridad-industrial-clase-e-santul',
-    brand: 'Santul®',
-    categorySlug: 'equipo-seguridad',
-    categoryName: 'Seguridad y EPP',
-    shortDescription: 'Fabricado en polietileno de alto impacto con suspensión de 4 puntos y ajuste de matraca. Protección dieléctrica hasta 20,000V.',
-    description: 'Equipo de protección normado del catálogo Santul® conforme a NOM-115-STPS y ANSI Z89.1. Protege la cabeza contra impacto de objetos en caída libre y descargas eléctricas.',
-    images: [
-      './images/cat-seguridad.jpg',
-      './images/hero-industrial.jpg'
-    ],
-    specifications: [
-      { label: 'Código de Catálogo', value: '9110' },
-      { label: 'Normativa', value: 'NOM-115-STPS-2009 / ANSI Z89.1' },
-      { label: 'Clasificación', value: 'Tipo I, Clase E (Dieléctrico 20,000V)' },
-      { label: 'Suspensión', value: '4 puntos de apoyo con almohadilla frontal' },
-      { label: 'Ajuste', value: 'Perilla de matraca ergonómica' }
-    ],
-    features: [
-      'Ranuras laterales universales para orejeras y caretas de soldador',
-      'Banda absorbente de sudor frontal lavable y reemplazable',
-      'Diseño aerodinámico con visera frontal corta para amplio campo visual'
-    ],
-    applications: [
-      'Obras de construcción civil y montaje de estructuras',
-      'Líneas de subestación eléctrica y cableado en plantas',
-      'Supervisión y auditorías en parques industriales'
-    ],
-    featured: true,
-    inStock: true
-  },
-  {
-    id: 'prod-santul-flexometro',
-    sku: 'STL-5712',
-    model: 'Flexómetro Uso Rudo 8m Santul',
-    name: 'Flexómetro de Alta Resistencia 8 Metros / 26 Pies Santul®',
-    slug: 'flexometro-alta-resistencia-8m-santul',
-    brand: 'Santul®',
-    categorySlug: 'instrumentos-medicion',
-    categoryName: 'Medición y Precisión',
-    shortDescription: 'Cinta de acero recubierta de polímero nylon contra abrasión, carcasa bimaterial antichoque y gancho magnético.',
-    description: 'Herramienta de medición indispensable del catálogo Santul® para albañiles, carpinteros y herreros. Su cinta extra ancha resiste hasta 2.5 metros en voladizo sin doblarse.',
-    images: [
-      './images/cat-seguridad.jpg',
-      './images/cat-manuales.jpg'
-    ],
-    specifications: [
-      { label: 'Código de Catálogo', value: '5712' },
-      { label: 'Longitud', value: '8 metros (26 pies)' },
-      { label: 'Ancho de Cinta', value: '25 mm (1")' },
-      { label: 'Graduación', value: 'Milímetros y pulgadas en alta visibilidad' },
-      { label: 'Carcasa', value: 'ABS de alto impacto con cubierta de TPR' }
-    ],
-    features: [
-      'Freno automático y botón de bloqueo de un solo toque',
-      'Clip metálico reforzado para cinturón y correa de muñeca',
-      'Gancho de acero remachado con ajuste para medición interior/exterior'
-    ],
-    applications: [
-      'Medición de obra, cancelería y habilitado de varilla',
-      'Armado de muebles y estructuras de herrería',
-      'Supervisión de dimensiones en obra civil'
-    ],
-    featured: false,
-    inStock: true
-  },
-  {
     id: 'prod-plastiforze-lona-uso-rudo',
     sku: 'PFZ-3120',
     model: 'Lona Uso Rudo 6x9m Reforzada Plastiforze',
@@ -299,8 +159,8 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Tejido de polietileno de alta densidad 14x14 hilos por pulgada con laminado doble impermeable y esquinas reforzadas.',
     description: 'Solución de protección de intemperie del catálogo Santul/Plastiforze® para protección de materiales, agregados de construcción, maquinaria en obra civil y remolques de carga pesada.',
     images: [
-      './images/cat-construccion.jpg',
-      './images/hero-industrial.jpg'
+      './images/products/lona.jpg',
+      './images/cat-construccion.jpg'
     ],
     specifications: [
       { label: 'Código de Catálogo', value: '3120' },
@@ -334,8 +194,8 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Acero Cromo-Vanadio forjado con matraca reversible de 72 dientes y botón de desacople rápido. Estuche de uso pesado.',
     description: 'Set mecánico profesional del catálogo Santul/Keer® para talleres de mantenimiento automotriz, flotillas diésel e instalaciones de maquinaria pesada.',
     images: [
-      './images/cat-manuales.jpg',
-      './images/hero-industrial.jpg'
+      './images/products/dados.jpg',
+      './images/cat-manuales.jpg'
     ],
     specifications: [
       { label: 'Código de Catálogo', value: '6840' },
@@ -369,8 +229,8 @@ export const PRODUCTS: Product[] = [
     shortDescription: 'Cuerpo de aluminio inyectado para alta disipación térmica, protección IP65 para intemperie y 10,000 lúmenes de flujo.',
     description: 'Luminaria de grado industrial del catálogo Santul/Sanelec® para patios de maniobras, naves de almacenaje, accesos de planta y obras de construcción nocturnas.',
     images: [
-      './images/cat-seguridad.jpg',
-      './images/cat-construccion.jpg'
+      './images/products/reflector.jpg',
+      './images/cat-seguridad.jpg'
     ],
     specifications: [
       { label: 'Código de Catálogo', value: '1450' },
@@ -390,8 +250,183 @@ export const PRODUCTS: Product[] = [
       'Patios de carga y descarga de trailers',
       'Iluminación de frentes de obra en turnos vespertinos y nocturnos'
     ],
+    featured: true,
+    inStock: true
+  },
+  {
+    id: 'prod-sanplom-bomba-periferica',
+    sku: 'SPL-7110',
+    model: 'Bomba Periférica 1/2 HP Sanplom',
+    name: 'Bomba Periférica de Agua 1/2 HP Alta Presión Sanplom®',
+    slug: 'bomba-periferica-agua-media-hp-sanplom',
+    brand: 'Sanplom®',
+    categorySlug: 'herramientas-industriales',
+    categoryName: 'Herramientas Industriales',
+    shortDescription: 'Impulsor de latón antibloqueo, bobinado de cobre de alta conductividad y altura máxima de bombeo de hasta 40 metros.',
+    description: 'Equipo de bombeo del catálogo Santul/Sanplom® para presurización y suministro de agua limpia en instalaciones hidrosanitarias, tinacos, cisternas y talleres de trabajo.',
+    images: [
+      './images/products/bomba.jpg',
+      './images/hero-industrial.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '7110' },
+      { label: 'Potencia', value: '1/2 HP (370 Watts)' },
+      { label: 'Altura Máxima', value: '40 metros' },
+      { label: 'Caudal Máximo', value: '40 Litros/minuto' },
+      { label: 'Diámetro Succión/Descarga', value: '1" NPT hembra' },
+      { label: 'Impulsor', value: 'Latón de alta resistencia' }
+    ],
+    features: [
+      'Protector térmico integrado en motor contra sobrecalentamiento',
+      'Tratamiento cataforético antioxidante en cámara de bombeo',
+      'Bajo consumo eléctrico y operación silenciosa'
+    ],
+    applications: [
+      'Elevación de agua hacia tinacos y tanques elevados en naves',
+      'Alimentación de sistemas hidroneumáticos de presión constante',
+      'Riego de áreas verdes y abastecimiento general'
+    ],
+    featured: true,
+    inStock: true
+  },
+  {
+    id: 'prod-santul-pinzas-chofer',
+    sku: 'STL-8410',
+    model: 'Juego de Pinzas Profesionales 3 Pzas Santul',
+    name: 'Juego de Pinzas Profesionales de Aislamiento 3 Piezas Santul®',
+    slug: 'juego-pinzas-profesionales-3-piezas-santul',
+    brand: 'Santul®',
+    categorySlug: 'herramientas-manuales',
+    categoryName: 'Herramientas Manuales',
+    shortDescription: 'Fabricadas en acero carbono forjado con mordazas templadas por inducción y mangos ergonómicos con topes antideslizantes.',
+    description: 'Trío indispensable del catálogo Santul®: Pinza de electricista 8", Pinza de punta y corte 6", y Pinza de chofer 8". Ideal para cuadrillas de mantenimiento industrial y montaje.',
+    images: [
+      './images/products/pinzas.jpg',
+      './images/cat-manuales.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '8410' },
+      { label: 'Contenido', value: '3 piezas (Electricista 8", Punta 6", Chofer 8")' },
+      { label: 'Material', value: 'Acero al carbono forjado' },
+      { label: 'Filo', value: 'Templado por inducción de alta frecuencia' },
+      { label: 'Mangos', value: 'Vinil antiderrapante doble inyección' }
+    ],
+    features: [
+      'Filos rectificados para corte preciso de cables de cobre y aluminio',
+      'Mordazas con maquinado diamantado para agarre firme',
+      'Acabado pulido brillante con barniz protector contra óxido'
+    ],
+    applications: [
+      'Instalaciones eléctricas y corte de conductores',
+      'Sujeción de tornillería y cables en tableros',
+      'Mantenimiento general en cuadrillas de obra'
+    ],
     featured: false,
+    inStock: true
+  },
+  {
+    id: 'prod-sanelec-centro-carga',
+    sku: 'SNL-1280',
+    model: 'Centro de Carga 4 Circuitos Sanelec',
+    name: 'Centro de Carga Bifásico 4 Circuitos Sobreponer Sanelec®',
+    slug: 'centro-de-carga-bifasico-4-circuitos-sanelec',
+    brand: 'Sanelec®',
+    categorySlug: 'herramientas-industriales',
+    categoryName: 'Herramientas Industriales',
+    shortDescription: 'Gabinete metálico con pintura horneada, barras de cobre electrolítico y compatibilidad con pastillas termomagnéticas estándar.',
+    description: 'Componente eléctrico certificado del catálogo Sanelec® para distribución y protección de circuitos en talleres, locales comerciales e instalaciones industriales ligeras.',
+    images: [
+      './images/products/centro_carga.jpg',
+      './images/cat-seguridad.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '1280' },
+      { label: 'Circuitos', value: '4 Espacios (Bifásico)' },
+      { label: 'Tensión Máxima', value: '120/240 V~' },
+      { label: 'Corriente Nominal', value: '60 A' },
+      { label: 'Gabinete', value: 'Lámina de acero rolada en frío' }
+    ],
+    features: [
+      'Entradas pre-cortadas (knockouts) para canalización en 1/2" y 3/4"',
+      'Fácil montaje en muro con terminales de neutro y tierra independientes',
+      'Certificación NOM vigente'
+    ],
+    applications: [
+      'Protección de circuitos de maquinaria en talleres mecánicos',
+      'Alimentación de compresores y herramientas estacionarias',
+      'Tableros secundarios en bodegas y naves'
+    ],
+    featured: false,
+    inStock: true
+  },
+  {
+    id: 'prod-sanplom-stillson',
+    sku: 'SPL-6710',
+    model: 'Llave Stillson 18" Uso Pesado Sanplom',
+    name: 'Llave para Tubo Stillson 18" Hierro Nodular Sanplom®',
+    slug: 'llave-para-tubo-stillson-18-pulgadas-sanplom',
+    brand: 'Sanplom®',
+    categorySlug: 'herramientas-manuales',
+    categoryName: 'Herramientas Manuales',
+    shortDescription: 'Cuerpo de hierro nodular forjado con mordazas de acero templado por inducción para sujeción firme de tubería de gas y agua.',
+    description: 'Herramienta de apriete indispensable del catálogo Sanplom® para plomeros e instaladores industriales. Permite trabajar tuberías galvanizadas, de cobre y cédula 40 sin resbalar.',
+    images: [
+      './images/products/stillson.jpg',
+      './images/cat-manuales.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '6710' },
+      { label: 'Longitud', value: '18" (450 mm)' },
+      { label: 'Apertura Máxima', value: '2-1/2" (63 mm)' },
+      { label: 'Material del Cuerpo', value: 'Hierro nodular de alta resistencia' },
+      { label: 'Mordazas', value: 'Acero aleado forjado y estriado profundo' }
+    ],
+    features: [
+      'Tuerca moleteada de avance rápido con resorte de recuperación',
+      'Perfil con viga en I para máximo brazo de palanca sin flexión',
+      'Acabado con pintura horneada anticorrosión'
+    ],
+    applications: [
+      'Instalaciones de gas LP y natural en plantas y comercios',
+      'Mantenimiento de tuberías hidroneumáticas de vapor y agua',
+      'Apriete y desmonte de uniones roscadas NPT'
+    ],
+    featured: false,
+    inStock: true
+  },
+  {
+    id: 'prod-santul-casco',
+    sku: 'STL-9110',
+    model: 'Casco de Protección Dieléctrico Tipo I Clase E Santul',
+    name: 'Casco de Seguridad Industrial Tipo I Clase E Santul®',
+    slug: 'casco-seguridad-industrial-clase-e-santul',
+    brand: 'Santul®',
+    categorySlug: 'equipo-seguridad',
+    categoryName: 'Seguridad y EPP',
+    shortDescription: 'Fabricado en polietileno de alto impacto con suspensión de 4 puntos y ajuste de matraca. Protección dieléctrica hasta 20,000V.',
+    description: 'Equipo de protección normado del catálogo Santul® conforme a NOM-115-STPS y ANSI Z89.1. Protege la cabeza contra impacto de objetos en caída libre y descargas eléctricas.',
+    images: [
+      './images/products/casco.jpg',
+      './images/hero-industrial.jpg'
+    ],
+    specifications: [
+      { label: 'Código de Catálogo', value: '9110' },
+      { label: 'Normativa', value: 'NOM-115-STPS-2009 / ANSI Z89.1' },
+      { label: 'Clasificación', value: 'Tipo I, Clase E (Dieléctrico 20,000V)' },
+      { label: 'Suspensión', value: '4 puntos de apoyo con almohadilla frontal' },
+      { label: 'Ajuste', value: 'Perilla de matraca ergonómica' }
+    ],
+    features: [
+      'Ranuras laterales universales para orejeras y caretas de soldador',
+      'Banda absorbente de sudor frontal lavable y reemplazable',
+      'Diseño aerodinámico con visera frontal corta para amplio campo visual'
+    ],
+    applications: [
+      'Obras de construcción civil y montaje de estructuras',
+      'Líneas de subestación eléctrica y cableado en plantas',
+      'Supervisión y auditorías en parques industriales'
+    ],
+    featured: true,
     inStock: true
   }
 ];
-
